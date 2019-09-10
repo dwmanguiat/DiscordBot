@@ -1,12 +1,20 @@
-from discord import message
+import discord
 # import pyodbc
 
 
-def has_embeds(embedsList):
-    if len(embedsList) > 0:
-        # add shit to db
-        print("this message contains embedded links")
-        for link in embedsList:
-            print(link.url)
+def hasEmbeds(message):
+    if len(message.embeds) > 0:
+        return True
+    else:
+        return False
 
-    return True
+
+def logEmbeds(message):
+
+    if hasEmbeds(message) is False:
+        return
+
+    for link in message.embeds:
+        print(link) # placeholder for logging to db
+
+
