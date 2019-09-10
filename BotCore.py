@@ -3,6 +3,7 @@ import json
 
 client = discord.Client()
 print("test")
+print("test2")
 
 @client.event
 async def on_message(message):
