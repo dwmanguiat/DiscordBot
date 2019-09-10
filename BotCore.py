@@ -1,6 +1,7 @@
 import discord
 import json
 
+global config
 client = discord.Client()
 
 
