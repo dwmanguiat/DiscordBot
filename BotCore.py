@@ -2,7 +2,7 @@ import discord
 import json
 
 client = discord.Client()
-#test
+print("test")
 
 @client.event
 async def on_message(message):
