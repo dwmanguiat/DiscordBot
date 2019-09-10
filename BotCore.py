@@ -1,5 +1,6 @@
 import discord
 import json
+import HighlightBot as hb
 
 
 client = discord.Client()
@@ -14,11 +15,8 @@ async def on_message(message):
 
     if str(message.channel) in config["Channels"]:
     
-        if message.content.startswith('!420'):
-            msg = 'blaze it'
-            msg = msg.format(message)
-            channel = message.channel
-            await channel.send(msg)
+        if hb.has_embeds(message.embeds) == 1:
+            print("h")
 
     else:
         print('message out of channel')
