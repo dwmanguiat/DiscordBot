@@ -3,13 +3,15 @@ import json
 
 client = discord.Client()
 
+
 @client.event
 async def on_message(message):
-    # we do not want the bot to reply to itself
+
+    # stops bot from replying to self
     if message.author == client.user:
         return
 
-    if str(message.channel) == 'discord-bot-simulator':
+    if str(message.channel) in config["Channels"]:
     
         if message.content.startswith('!420'):
             msg = 'blaze it'
@@ -26,17 +28,19 @@ async def on_ready():
     print('Logged in as')
     print(client.user.name)
     print(client.user.id)
+    print("Config file loaded")
     print('------')
 
 
 def get_config(path):
-    config = {}
+    config_dict = {}
     with open(path) as json_file:
-        config = json.loads(json_file.read())
-    return config
+        config_dict = json.loads(json_file.read())
+    return config_dict
 
 
 def main():
+    global config
     config = get_config("config.json")
     client.run(config["Token"])
 
