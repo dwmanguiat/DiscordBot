@@ -15,7 +15,7 @@ async def on_message(message):
 
     if str(message.channel) in config["Channels"]:
     
-        if hb.is_video_link(message.content) == 1:
+        if hb.has_embeds(message.embeds) == 1:
             print("h")
 
     else:
