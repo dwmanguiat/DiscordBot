@@ -3,13 +3,14 @@ import json
 
 client = discord.Client()
 
+
 @client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
         return
 
-    if str(message.channel) == 'discord-bot-simulator':
+    if str(message.channel) == "discord-bot-simulator":
     
         if message.content.startswith('!420'):
             msg = 'blaze it'
