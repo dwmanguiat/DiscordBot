@@ -15,6 +15,6 @@ def logEmbeds(message):
         return
 
     for link in message.embeds:
-        print(link) # placeholder for logging to db
+        print(link.url) # placeholder for logging to db
 
 
