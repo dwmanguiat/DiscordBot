@@ -15,7 +15,7 @@ async def on_message(message):
 
     if str(message.channel) in config["Channels"]:
     
-        hb.logEmbeds(message)
+        hb.logEmbeds(message, config["Embed Logging csv"])
 
     else:
         print('message out of channel')

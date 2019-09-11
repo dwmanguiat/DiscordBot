@@ -3,6 +3,7 @@
   "Token": "NTcyOTM2MzI4MjIwNzcwMzA1.XXg0rQ.KJ5anPltKAffgyI6ERVS33eMgYc",
   "Channels" : ["discord-bot-simulator",
                 "top-secret",
-                "etc"]
+                "etc"],
+  "Embed Logging csv": "P:\\appData\\embed_logging_dev.csv"
 
 }
