@@ -27,7 +27,6 @@ def logEmbeds(message, data_file):
         csv_file.close()
 
     for link in message.embeds:
-        print(link.url) # placeholder for logging to db
         with open(os.path.normpath(data_file), "a", newline='') as csv_file:
             writer = csv.DictWriter(csv_file, columns)
             writer.writerow({'embedURL': link.url, 'author': message.author, 'UTC': datetime.datetime.utcnow(),
