@@ -13,7 +13,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    msg = util.antagonizeUser(message, config["Message Counter"], ["mschlehr#5056", ])
+    msg = util.antagonizeUser(message, config["Message Counter"], ["mschlehr#5056", "RottenAirplane#5943"])
     if msg:
         channel = message.channel
         msg.format(message)
