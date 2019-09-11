@@ -13,6 +13,12 @@ async def on_message(message):
     if message.author == client.user:
         return
 
+    if str(message.author) == "dmango#4247":
+
+        msg = hb.antagonizeUser(message, config["Message Counter"])
+        if msg != "":
+            await message.channel.send(msg)
+
     if str(message.channel) in config["Channels"]:
     
         hb.logEmbeds(message, config["Embed Logging csv"])

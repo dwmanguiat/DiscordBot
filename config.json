@@ -1,9 +1,10 @@
 {
 
-  "Token": "NTcyOTM2MzI4MjIwNzcwMzA1.XXg0rQ.KJ5anPltKAffgyI6ERVS33eMgYc",
+  "Token": "NTcyOTM2MzI4MjIwNzcwMzA1.XXhEKQ.v_UnbE8NOx8yeGTB4ipAzTSZVVs",
   "Channels" : ["discord-bot-simulator",
                 "top-secret",
                 "etc"],
-  "Embed Logging csv": "P:\\appData\\embed_logging_dev.csv"
+  "Embed Logging csv": "P:\\appData\\embed_logging_dev.csv",
+  "Message Counter" : "P:\\appData\\mattmessages.tmp"
 
 }
