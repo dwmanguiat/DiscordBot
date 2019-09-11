@@ -1,10 +1,10 @@
 import discord
 import json
 import HighlightBot as hb
+import util
 
 
 client = discord.Client()
-
 
 @client.event
 async def on_message(message):
@@ -13,18 +13,20 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if str(message.author) == "dmango#4247":
-
-        msg = hb.antagonizeUser(message, config["Message Counter"])
-        if msg != "":
-            await message.channel.send(msg)
+    msg = util.antagonizeUser(message, config["Message Counter"], ["mschlehr#5056", ])
+    if msg:
+        channel = message.channel
+        msg.format(message)
+        await channel.send(str(msg))
+    else:
+        return
 
     if str(message.channel) in config["Channels"]:
     
         hb.logEmbeds(message, config["Embed Logging csv"])
 
     else:
-        print('message out of channel')
+        return
 
 
 
