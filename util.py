@@ -9,7 +9,7 @@ def antagonizeUser(message, data_file, users):
         return
 
     msg = ""
-    if os.path.exists(data_file) is True:
+    if os.path.exists(data_file):
         with open(data_file, "r") as tmp_file:
             reader = csv.DictReader(tmp_file)
             values = []
@@ -36,7 +36,7 @@ def antagonizeUser(message, data_file, users):
 
     else:
         cols = ["Counter", "Limit"]
-        values = [1, random.randint(1, 50)]
+        values = [1, random.randint(5, 100)]
         with open(data_file, "w", newline='') as tmp_file:
             writer = csv.DictWriter(tmp_file, fieldnames=cols)
             writer.writeheader()
